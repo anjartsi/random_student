@@ -1,0 +1,65 @@
+html{
+	background-color: #66A3C2;
+	font-family: verdana;
+}
+.buttonBar{
+	text-align: center;
+}
+
+
+button{
+	height:100px;
+	width: 300px;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 25px ;
+	cursor: pointer;
+	display: inline;
+	-webkit-user-select: none;/*make the text in this button non-highlightable*/
+}
+
+.student{
+	font-size: 20px;
+	display: inline;
+	margin: 2px;
+	height:75px;
+	width: 250px;
+	cursor: pointer;
+	-webkit-user-select: none;/*make the text in this button non-highlightable*/
+}
+
+#buttonContainer{
+	text-align: center;
+}
+
+#odds{
+	text-align: center;	
+	font-size:  25px;
+}
+
+#studentsContainer{
+text-align: center;	
+margin-top: 10px;
+}
+
+#chosen{
+	font-size: 50px;
+	text-align: center;
+	height: 70px;
+}
+
+
+
+
+.picked{
+	font-size: 22px;
+	color:red;
+	text-decoration: line-through;
+}
+
+h1{
+	text-align: center;
+}
+h5{
+	text-align: right;
+}
