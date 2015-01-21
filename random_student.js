@@ -1,17 +1,17 @@
 var  allStudents=[
-"Arejian, Alexa	",
-"Babikian, Vana	",
-"Dermendjian, Lily	",
-"Gevoglanian, Angelica	",
-"Hamzoian, Hrach	",
-"Kalbakian, Armine	",
-"Kazanchyan, Shawn	",
-"Kazazian, Tamar	",
-"Keosseian, Sevag	",
-"Koseyan, Sarkis	",
-"Markarian, Brittany	",
-"Ohanian, Talar	",
-"Ourfalian, Talar"
+"Student A	",
+"Student B	",
+"Student C	",
+"Student D	",
+"Student E	",
+"Student F	",
+"Student G	",
+"Student H	",
+"Student I	",
+"Student J	",
+"Student K	",
+"Student L	",
+"Student M	"
 ];
 var studentNums=[];
 var x;
