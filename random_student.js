@@ -1,17 +1,26 @@
-var  allStudents=[
-"Student A	",
-"Student B	",
-"Student C	",
-"Student D	",
-"Student E	",
-"Student F	",
-"Student G	",
-"Student H	",
-"Student I	",
-"Student J	",
-"Student K	",
-"Student L	",
-"Student M	"
+// Replace these with student names. 
+// I plan on getting this info through PHP from a spreadsheet
+var allStudents=[
+"Student 1	",
+"Student 2	",
+"Student 3	",
+"Student 4	",
+"Student 5	",
+"Student 6	",
+"Student 7	",
+"Student 8	",
+"Student 9	",
+"Student 10	",
+"Student 11	",
+"Student 12	",
+"Student 13	",
+"Student 14	",
+"Student 15	",
+"Student 16	",
+"Student 17	",
+"Student 18	",
+"Student 19	",
+"Student 20	"
 ];
 var studentNums=[];
 var x;
@@ -31,21 +40,11 @@ $(function() {
 		$('#studentsContainer').html(add);
 		studentNums[i]=0;
 	};
-	odds();
+	printOdds();
 	// This will take care of registering all of our event listeners
 	initEventListeners();
 });
 
-/**
-//removed this function, i rewrote it below without using the toggleClass
-var clickStudent = function() {
-	$(this).toggleClass('picked');
-	a= $(this).attr('id');
-	studentNums[a]=(studentNums[a]+1)%2;
-	printChosenOne(allStudents[a]);
-	addCounter();
-}
-**/
 // When you click on a student, they are either picked or unpicked
 var clickStudent = function() {
 	a = $(this).attr('id');
@@ -62,13 +61,12 @@ var clickStudent = function() {
 		addCounter();
 	}
 }
-// &&count()<13
-// ^goes in while loop
+
 //randomly chooses a student and prints them as chosenOne
 var randomize = function() {
 	if(counter==allStudents.length){
 		
-		odds();
+		printOdds();
 	}
 	else{
 		x=parseInt(Math.random()*allStudents.length);
@@ -90,23 +88,27 @@ var reset = function() {
 	};
 	printChosenOne('');
 	counter=0;
+	printOdds();
 }
 
+// adds 1 to the count of how many students were selected
 var addCounter = function(){
 	if (counter<allStudents.length) {
 		counter++;
 	};
-	odds();
+	printOdds();
 }
 
+// subtracts 1 from the count of how many students were selected
 var subractCounter = function() {
 	if (counter>0){
 		counter--;
 	}
-	odds();
+	printOdds();
 }
 
-var odds = function () {
+// prints the odds of a single person getting picked next
+var printOdds = function () {
 	var p=100/(allStudents.length-counter);
 	p = p.toPrecision(3); 
 	if (counter==allStudents.length) {
@@ -115,7 +117,7 @@ var odds = function () {
 	$('#chances').html(p+'%');
 }
 
-
+// prints the name of the latest picked student in the #chosen div
 var printChosenOne=function(name) {
 	$('#chosen').html(name);
 }
